@@ -1,6 +1,10 @@
 import { Page1 } from './../pages/page1/page1';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
+
+import {EliteApi} from '../shared/shared'
+
 import { MyApp } from './app.component';
 import {
   MyTeamsPage,
@@ -23,7 +27,8 @@ import {
     StandingsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,6 +41,9 @@ import {
     TeamHomePage,
     StandingsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    EliteApi
+    ]
 })
 export class AppModule {}

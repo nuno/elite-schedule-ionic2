@@ -2,11 +2,11 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-
-import { Page1 } from '../pages/page1/page1';
+//import { HttpModule } from '@angular/http';
+//import { Page1 } from '../pages/page1/page1';
 
 import { MyTeamsPage, TournamentsPage} from '../pages/pages';
-
+import { EliteApi } from './shared/shared';
 
 @Component({
   templateUrl: 'app.html'
