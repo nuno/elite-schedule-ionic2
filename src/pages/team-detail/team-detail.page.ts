@@ -23,11 +23,6 @@ export class TeamDetailPage {
     console.log('**nav params:', this.navParams);
   }
 
-/*  goHome(){
-    console.log('**parent', this.nav.parent);
-    this.nav.parent.parent.popToRoot();
-  }*/
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad TeamDetailPage');
   }

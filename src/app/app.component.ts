@@ -2,8 +2,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-//import { HttpModule } from '@angular/http';
-//import { Page1 } from '../pages/page1/page1';
 
 import { MyTeamsPage, TournamentsPage} from '../pages/pages';
 import { EliteApi } from './shared/shared';
@@ -16,18 +14,8 @@ export class MyApp {
 
   rootPage: any = MyTeamsPage;
 
-  //pages: Array<{title: string, component: any}>;
-
   constructor(public platform: Platform) {
     this.initializeApp();
-
-    // used for an example of ngFor and navigation
-    /*this.pages = [
-      { title: 'Page One', component: Page1 },
-      { title: 'Page Two', component: MyTeamsPage },
-      { title: 'Page 3', component: TournamentsPage }
-    ];*/
-
   }
 
   initializeApp() {
@@ -38,12 +26,6 @@ export class MyApp {
       Splashscreen.hide();
     });
   }
-
-  /*openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
-  }*/
 
   goHome(){
     this.nav.push(MyTeamsPage);
